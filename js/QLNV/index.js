@@ -95,7 +95,7 @@ function capNhatNhanVien() {
     hienthi(qlnv.dsnv);
     resetForm();
     // document.getElementById('btnDong');
-    document.getElementById('tknv').disabled = true;
+
 }
 
 /* Xóa - Chọn nhân viên */
@@ -116,6 +116,10 @@ function xoaNhanVien(taiKhoan) {
 }
 function chonNhanVien(taiKhoan) {
     var nhanVien = qlnv.chonNV(taiKhoan)
+
+    document.getElementById('tknv').disabled = true;
+    document.getElementById('btnThemNV').disabled = true;
+
     upLoadForm(nhanVien);
 }
 
